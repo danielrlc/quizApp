@@ -42,10 +42,20 @@ body {
 }
 
 li {
-  margin: 20px;
+  padding: 20px;
   list-style-type: none;
+  margin: 12px;
 }
 
-.correct {
+.rightShow {
   background-color: green;
 }
+
+.wrongShow {
+  background-color: red;
+}
+
+audio {
+  text-align: center;
+}
+
