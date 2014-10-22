@@ -3,13 +3,12 @@
 }
 
 body {
-  background-color: #ddd;
   width: 800px;
   margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .Q1, .Q2, .Q3, .Q4, .Q5 {
-  background-color: #aaa;
   /*height: 100px;*/
   width: 800px;
   display: block;
@@ -40,4 +39,13 @@ body {
 
 .clearfix {
     *zoom: 1; /* IE6&7 */
+}
+
+li {
+  margin: 20px;
+  list-style-type: none;
+}
+
+.correct {
+  background-color: green;
 }
