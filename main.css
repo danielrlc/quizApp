@@ -9,7 +9,6 @@ body {
 }
 
 .Q1, .Q2, .Q3, .Q4, .Q5 {
-  /*height: 100px;*/
   width: 800px;
   display: block;
 }
@@ -58,4 +57,5 @@ li {
 audio {
   text-align: center;
 }
+
 

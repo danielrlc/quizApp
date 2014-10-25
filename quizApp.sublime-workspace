@@ -1,0 +1,353 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"user",
+				"userGuess"
+			],
+			[
+				"random",
+				"randomInt"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"fo",
+				"font-style"
+			],
+			[
+				"ry",
+				"ryu-ready"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"ryu",
+				"ryu-still"
+			],
+			[
+				"addItem",
+				"addItem"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"ba",
+				"background-size"
+			],
+			[
+				"fl",
+				"float"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 167.0,
+		"selected_items":
+		[
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"snip",
+				"Snippet: if … else"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"",
+				"Preferences: Browse Packages"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/daniel/Documents/Github/Thinkful/quizApp"
+	],
+	"file_history":
+	[
+		"/Users/daniel/Documents/Github/Thinkful/quizApp/reset.css",
+		"/Users/daniel/Documents/Github/Thinkful/quizApp/index.html",
+		"/Users/daniel/Documents/Github/Thinkful/quizApp/main.css",
+		"/Users/daniel/Documents/Github/Thinkful/quizApp/app.js",
+		"/Users/daniel/Library/Application Support/Sublime Text 3/Packages/Emmet/Default (OSX).sublime-keymap",
+		"/Users/daniel/Library/Application Support/Sublime Text 3/Packages/JSLint/JSLint.sublime-settings",
+		"/Users/daniel/Documents/Github/Thinkful/hotOrCold/index.html",
+		"/Users/daniel/Dropbox/Coding/Project Euler/2.evenFibonacciNumbers.js",
+		"/Users/daniel/Dropbox/Coding/Project Euler/1.multiplesOf3And5.js",
+		"/Users/daniel/Documents/Github/Thinkful/test/index.html",
+		"/Users/daniel/Dropbox/Github/Thinkful/quizApp/app.js",
+		"/Users/daniel/Dropbox/Github/Thinkful/quizApp/main.css",
+		"/Users/daniel/Dropbox/Github/Thinkful/quizApp/index.html",
+		"/Users/daniel/Dropbox/Github/Thinkful/shopping-list-interactive/index.html",
+		"/Users/daniel/Dropbox/Github/Thinkful/hotOrCold/js/appAlt.js",
+		"/Users/daniel/Dropbox/Github/functionalJS/scope/functions.js",
+		"/Users/daniel/Dropbox/Github/JS102/scripts.js",
+		"/Users/daniel/Dropbox/Github/JS102/index.html",
+		"/Users/daniel/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/daniel/Dropbox/Github/Thinkful/rockPaperScissors/app.js",
+		"/Users/daniel/Dropbox/Github/Thinkful/rockPaperScissors/index.html",
+		"/Users/daniel/Dropbox/Github/Thinkful/hotOrCold/js/app.js",
+		"/Users/daniel/Dropbox/Github/Thinkful/hotOrCold/styles/style.css",
+		"/Users/daniel/Dropbox/Github/Thinkful/hotOrCold/index.html",
+		"/Users/daniel/Dropbox/Github/Thinkful/fizzBuzzRefactor/app.js",
+		"/Users/daniel/Dropbox/Github/Thinkful/fizzBuzzRefactor/index.html",
+		"/Users/daniel/Dropbox/Github/Thinkful/lyndaJavaScriptEssentialTraining.js",
+		"/Users/daniel/Dropbox/Github/Thinkful/fizzBuzzRefactor/test.html",
+		"/Users/daniel/Dropbox/Github/Thinkful/jquery-streetfighter/js/app.js",
+		"/Users/daniel/Dropbox/Github/Thinkful/jquery-streetfighter/css/main.css",
+		"/Users/daniel/Dropbox/Github/Thinkful/jquery-streetfighter/index.html",
+		"/Users/daniel/Library/Application Support/Sublime Text 3/Packages/User/JavaScript.sublime-settings",
+		"/Users/daniel/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/daniel/Documents/Github/Thinkful/fizz-buzz/index.html",
+		"/Users/daniel/Documents/Github/Thinkful/fizz-buzz/app.js",
+		"/Users/daniel/Documents/Github/Thinkful/wax-tracks/main.css",
+		"/Users/daniel/Documents/Github/Thinkful/wax-tracks/index.html",
+		"/Users/daniel/Documents/Github/Thinkful/shopping-list-interactive/app.js",
+		"/Users/daniel/Documents/Github/Thinkful/shopping-list-interactive/main.css",
+		"/Users/daniel/Documents/Github/Thinkful/shopping-list-interactive/index.html",
+		"/Users/daniel/Documents/Github/Thinkful/jquery-streetfighter/js/app.js",
+		"/Users/daniel/Documents/Github/Thinkful/jquery-streetfighter/css/main.css",
+		"/Users/daniel/Documents/Github/Thinkful/jquery-streetfighter/index.html",
+		"/Users/daniel/Documents/Github/Thinkful/fizz-buzz/main.html",
+		"/Users/daniel/Documents/Github/Thinkful/jquery-streetfighter/main.html",
+		"/Users/daniel/Documents/Github/thinkful/jquery-streetfighter/main.html",
+		"/Users/daniel/Documents/Github/thinkful/jquery-streetfighter/js/app.js",
+		"/Users/daniel/Documents/Github/thinkful/jquery-streetfighter/css/main.css",
+		"/Users/daniel/Documents/Github/thinkful/shopping-list-interactive/app.js",
+		"/Users/daniel/Documents/Github/thinkful/shopping-list-interactive/main.css",
+		"/Users/daniel/Documents/Github/thinkful/shopping-list-interactive/index.html",
+		"/Users/daniel/Documents/Github/thinkful/shopping-list-static/main.css",
+		"/Users/daniel/Documents/Github/thinkful/shopping-list-static/index.html",
+		"/Users/daniel/Documents/Github/thinkful/html-resume/index.html",
+		"/Users/daniel/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/daniel/Documents/Github/thinkful/google-clone/main.css",
+		"/Users/daniel/Desktop/Pronunciation list",
+		"/Users/daniel/Desktop/What’s your name?",
+		"/Users/daniel/Desktop/Fish in breadcrumbs",
+		"/Users/daniel/Desktop/What are you going to do after the lesson?",
+		"/Users/daniel/Documents/Github/thinkful/google-clone/index.html",
+		"/Users/daniel/Documents/Github/thinkful/wax-tracks/index.html",
+		"/Users/daniel/Google Drive/websites/Wax Tracks/wax-tracks-main.css",
+		"/Users/daniel/Google Drive/websites/Wax Tracks/wax-tracks-index.html",
+		"/Users/daniel/Google Drive/websites/Thinkful - html-resume/index.html",
+		"/Users/daniel/Google Drive/websites/Google Clone/main.css",
+		"/Users/daniel/Google Drive/websites/Thinkful - html-resume/style.css",
+		"/Users/daniel/Google Drive/websites/Google Clone/google-clone.html",
+		"/Users/daniel/Google Drive/websites/Google Clone/index.html",
+		"/Users/daniel/Google Drive/websites/Google Clone/main-old.css",
+		"/Users/daniel/Dropbox/Coding/Thinkful/Google Clone/main.css",
+		"/Users/daniel/Dropbox/Coding/Thinkful/Google Clone/index.html",
+		"/Users/daniel/Dropbox/Coding/Testing area/treehouse_emmet_shorthands.html",
+		"/Users/daniel/Dropbox/Coding/Testing area/ST3 test.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"head",
+			"set",
+			"number",
+			"return",
+			"New Game",
+			"\"new\"",
+			"\"new!",
+			"userNumber",
+			"number",
+			"return",
+			"radio"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"inputNumber",
+			"userNumber",
+			"console.log"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 27.0
+	},
+	"output.find_results":
+	{
+		"height": 112.0
+	},
+	"project": "quizApp.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/Github/Thinkful/quizApp/quizApp.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 164.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
