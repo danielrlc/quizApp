@@ -1,61 +1,92 @@
-* {
-  outline: solid red 1px
-}
-
-body {
-  width: 800px;
-  margin: 0 auto;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.Q1, .Q2, .Q3, .Q4, .Q5 {
-  width: 800px;
-  display: block;
-}
-
-.question, .image {
-  width: 390px;
-  height: 100px;
-}
-
-.question {
-  float: left;
-}
-
-.image {
-  float: right;
-}
+/** {
+  outline: solid red 1px;
+}*/
 
 .clearfix:before,
 .clearfix:after {
     content: " ";
     display: table;
 }
-
 .clearfix:after {
     clear: both;
 }
-
 .clearfix {
     *zoom: 1; /* IE6&7 */
+}
+
+body {
+  width: 400px;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.6em;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+}
+
+.q1, .q2, .q3, .q4, .q5 {
+  display: block;
+  padding-bottom: 20px;
 }
 
 li {
   padding: 20px;
   list-style-type: none;
   margin: 12px;
+  border-radius: 8px;
+  background-color: #ddd;
 }
 
 .rightShow {
-  background-color: green;
+  background-color: #b2ffb2;
 }
 
 .wrongShow {
-  background-color: red;
+  background-color: #ff6666;
+}
+
+.previous, .next, li {
+  cursor: pointer;
+}
+
+.previous {
+  float: left;
+}
+
+/* *** not working */
+.previousGray, .nextGray {
+  text-decoration-color: #ddd;
+}
+
+.next {
+  float: right;
 }
 
 audio {
-  text-align: center;
+  padding-bottom: 20px;
 }
 
+p, .feedback {
+  padding: 10px;
+}
 
+.feedback {
+  height: 40px;
+}
+
+.game-info {
+  outline: solid #ccc 2px;
+  /* *** why is this not working? */
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px auto 20px;
+  width: 170px;
+}
+
+.qNum {
+  padding-bottom: 5px;
+}
