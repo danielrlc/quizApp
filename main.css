@@ -59,7 +59,7 @@ li {
 
 /* *** not working */
 .previousGray, .nextGray {
-  text-decoration-color: #ddd;
+  color: #bbb;
 }
 
 .next {

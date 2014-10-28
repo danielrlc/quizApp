@@ -3,15 +3,28 @@
 // Declare global variables.
 var i = 1;
 var score = 0;
+var qNum = 1;
 
 // Hide questions 2-5 in JavaScript, not in CSS, in case JavaScript is turned off.
 $(".q2, .q3, .q4, .q5").hide();
 
-// $(".qNum").append("Question 1 of 5");
-// $(".score").append("Your score is " + score + "%");
+// gray out previous and next navigation when they don't link anywhere
+var navGray = function() {
+  if (qNum === 1) {
+    $(".previous").addClass("previousGray");
+  }
+  else if (qNum === 5) {
+    $(".next").addClass("nextGray");
+  }
+  else {
+    $(".previous").removeClass("previousGray");
+    $(".next").removeClass("nextGray");
+  }
+};
+
+navGray();
 
 // Only one question showing at a time. Player clicks "next" button to navigate through questions.
-var qNum = 1;
 $(".next").on("click", function() {
   // *** set i globally, but is this a bad solution normally?
   i = 1;
@@ -20,20 +33,11 @@ $(".next").on("click", function() {
   if (qNum !== 5) {
     qNum++;
   }
+  navGray();
   $(".qNum").append("Question " + qNum + " of 5");
   $(".q" + qNum).show();
   $(".q" + (qNum - 1)).hide();
 });
-
-if (qNum === 1) {
-  $(".previous").addClass(".previousGray");
-}
-else if (qNum === 5) {
-  $(".next").addClass(".nextGray");
-}
-else {
-
-}
 
 $(".previous").on("click", function() {
   // *** set i globally, but is this a bad solution normally?
@@ -43,6 +47,7 @@ $(".previous").on("click", function() {
   if (qNum !== 1) {
     qNum--;
   }
+  navGray();
   $(".qNum").append("Question " + qNum + " of 5");
   $(".q" + qNum).show();
   $(".q" + (qNum + 1)).hide();
