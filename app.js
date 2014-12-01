@@ -6,29 +6,7 @@ var score = 0;
 var qNum = 0;
 
 // hide questions at start
-$(".q1, .q2, .q3, .q4, .q5").hide();
-
-// grey out previous and next navigation when they don't link anywhere
-var navGray = function() {
-  if (qNum === 0) {
-    $(".previous").addClass("previousGray");
-  }
-  else if (qNum === 5) {
-    $(".next").addClass("nextGray");
-  }
-  else {
-    $(".previous").removeClass("previousGray");
-    $(".next").removeClass("nextGray");
-  }
-  if (qNum === 0) {
-    $(".game-info").hide();
-  }
-  else {
-    $(".game-info").show();
-  }
-};
-
-navGray();
+$(".q1, .q2, .q3, .q4, .q5, .game-info").hide();
 
 // Pause audio when user clicks anywhere on page.
 // Thanks for help here:
@@ -53,27 +31,26 @@ $(".next").on("click", function() {
   if (qNum !== 5) {
     qNum++;
   }
-  navGray();
   $(".qNum").append("Question: " + qNum + " of 5");
   $(".q" + qNum).show();
   $(".q" + (qNum - 1)).hide();
+  $(".game-info").show();
 });
 
-$(".previous").on("click", function() {
-  // set wrongCounter, so can give different feedback
-  // for each wrong answer
-  wrongCounter = 1;
-  $(".feedback").empty();
-  $(".feedback").append("Listen and match the film to the music.");
-  $(".qNum").empty();
-  if (qNum !== 0) {
-    qNum--;
-  }
-  navGray();
-  $(".qNum").append("Question " + qNum + " of 5");
-  $(".q" + qNum).show();
-  $(".q" + (qNum + 1)).hide();
-});
+// $(".previous").on("click", function() {
+//   // set wrongCounter, so can give different feedback
+//   // for each wrong answer
+//   wrongCounter = 1;
+//   $(".feedback").empty();
+//   $(".feedback").append("Listen and match the film to the music.");
+//   $(".qNum").empty();
+//   if (qNum !== 0) {
+//     qNum--;
+//   }
+//   $(".qNum").append("Question " + qNum + " of 5");
+//   $(".q" + qNum).show();
+//   $(".q" + (qNum + 1)).hide();
+// });
 
 // ***************************************************************************************************************************
 
@@ -144,7 +121,7 @@ var q5 = new Question (
   );
 
 // Paste question object properties into CSS containers.
-$(".q0").append("<p>Greetings, music lovers!</p><p>John Williams has written many of the greatest film scores of the past 40 years. This quiz is a small tribute to his musical talents. So can you match the music to the film?</p><p>Sit back, get your musical ears ready, and turn the volume on your tinny speakers right up.</p>");
+$(".q0").append("<p>Greetings, music lovers!</p><p>John Williams has written many of the greatest film scores of the past 40 years. This quiz is a small tribute to his musical talents. So can you match the music to the film?</p><p>Sit back, get your musical ears ready, and... turn the volume up!</p>");
 $(".q1").append(q1.qAudio, q1.a1, q1.a2, q1.a3, q1.a4);
 $(".q2").append(q2.qAudio, q2.a1, q2.a2, q2.a3, q2.a4);
 $(".q3").append(q3.qAudio, q3.a1, q3.a2, q3.a3, q3.a4);
