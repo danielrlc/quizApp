@@ -1,13 +1,12 @@
-$( document ).ready(function() {
+$(document).ready(function() {
 
 // declare global variables
 var wrongCounter = 1;
 var score = 0;
 var qNum = 0;
 
-// hide questions 2-5, so only one Q at a time
+// hide questions at start
 $(".q1, .q2, .q3, .q4, .q5, .game-info").hide();
-
 
 // grey out previous and next navigation when they don't link anywhere
 var navGray = function() {
@@ -21,7 +20,10 @@ var navGray = function() {
     $(".previous").removeClass("previousGray");
     $(".next").removeClass("nextGray");
   }
-  if (qNum !== 0) {
+  if (qNum === 0) {
+    $(".game-info").hide();
+  }
+  else {
     $(".game-info").show();
   }
 };
@@ -32,11 +34,11 @@ navGray();
 // Thanks for help here:
 // http://stackoverflow.com/questions/965601
 $(document).click(function(){
-     $('audio').each(function() {
-     if(!this.paused){
-        this.pause();
-     }
-    });
+  $('audio').each(function() {
+    if(!this.paused){
+      this.pause();
+    }
+  });
 });
 
 // Only one question showing at a time.
@@ -46,6 +48,7 @@ $(".next").on("click", function() {
   // for each wrong answer
   wrongCounter = 1;
   $(".feedback").empty();
+  $(".feedback").append("Listen and match the film to the music.");
   $(".qNum").empty();
   if (qNum !== 5) {
     qNum++;
@@ -61,6 +64,7 @@ $(".previous").on("click", function() {
   // for each wrong answer
   wrongCounter = 1;
   $(".feedback").empty();
+  $(".feedback").append("Listen and match the film to the music.");
   $(".qNum").empty();
   if (qNum !== 0) {
     qNum--;
@@ -69,50 +73,6 @@ $(".previous").on("click", function() {
   $(".qNum").append("Question " + qNum + " of 5");
   $(".q" + qNum).show();
   $(".q" + (qNum + 1)).hide();
-});
-
-// ***************************************************************************************************************************
-
-// Feedback if player chooses right answer.
-$(".right").one("click", function() {
-  $(".feedback").empty();
-  $(".feedback").append("Correct!");
-  $(this).addClass("rightShow");
-  $(this).append("<audio src='tada-right.mp3' preload='auto' autoplay volume=.2></audio>");
-  if (wrongCounter === 1) {
-    score += 20;
-  }
-  $(".score").empty();
-  $(".score").append("Score: " + score + "%");
-  
-  // This makes sure player can't pick a wrong answer after selecting the right answer.
-  wrongCounter += 4;
-
-  // $(".audio-track").pause();
-
-});
-
-// Feedback if player chooses wrong answer. Different feedback is given for first, second and third wrong answer.
-$(".wrong").one("click", function() {
-  if (wrongCounter < 4) {
-  $(this).addClass("wrongShow");
-  $(this).append("<audio src='gongWrong.mp3' preload='auto' autoplay ></audio>");
-  }
-  else {
-  }
-  if (wrongCounter === 1) {
-    $(".feedback").empty();
-    $(".feedback").append("You have gong wrong.");
-  }
-  else if (wrongCounter === 2) {
-    $(".feedback").empty();
-    $(".feedback").append("Still wrong, thus the gong.");
-  }
-  else if (wrongCounter === 3) {
-    $(".feedback").empty();
-    $(".feedback").append("Maybe you just like the sound of gongs?");
-  }
-  wrongCounter++;
 });
 
 // ***************************************************************************************************************************
@@ -184,12 +144,53 @@ var q5 = new Question (
   );
 
 // Paste question object properties into CSS containers.
-$(".q0").append("<p>Hello there!</p><p>John Williams has written many of the greatest film scores of the past 40 years. This quiz is a small tribute to his musical talents. So can you match the music to the film?</p><p>Sit back, get your musical ears ready, and turn the volume right up.</p>")
+$(".q0").append("<p>Greetings, music lovers!</p><p>John Williams has written many of the greatest film scores of the past 40 years. This quiz is a small tribute to his musical talents. So can you match the music to the film?</p><p>Sit back, get your musical ears ready, and turn the volume on your tinny speakers right up.</p>");
 $(".q1").append(q1.qAudio, q1.a1, q1.a2, q1.a3, q1.a4);
 $(".q2").append(q2.qAudio, q2.a1, q2.a2, q2.a3, q2.a4);
 $(".q3").append(q3.qAudio, q3.a1, q3.a2, q3.a3, q3.a4);
 $(".q4").append(q4.qAudio, q4.a1, q4.a2, q4.a3, q4.a4);
 $(".q5").append(q5.qAudio, q5.a1, q5.a2, q5.a3, q5.a4);
+
+// ***************************************************************************************************************************
+
+// Feedback if player chooses right answer.
+$(".right").one("click", function() {
+  $(".feedback").empty();
+  $(".feedback").append("Correct!");
+  $(this).addClass("rightShow");
+  $(this).append("<audio src='tada-right.mp3' preload='auto' autoplay volume=.2></audio>");
+  if (wrongCounter === 1) {
+    score += 20;
+  }
+  $(".score").empty();
+  $(".score").append("Score: " + score + "%");
+  
+  // This makes sure player can't pick a wrong answer after selecting the right answer.
+  wrongCounter += 4;
+});
+
+// Feedback if player chooses wrong answer. Different feedback is given for first, second and third wrong answer.
+$(".wrong").one("click", function() {
+  if (wrongCounter < 4) {
+  $(this).addClass("wrongShow");
+  $(this).append("<audio src='gongWrong.mp3' preload='auto' autoplay ></audio>");
+  }
+  else {
+  }
+  if (wrongCounter === 1) {
+    $(".feedback").empty();
+    $(".feedback").append("You have gong wrong.");
+  }
+  else if (wrongCounter === 2) {
+    $(".feedback").empty();
+    $(".feedback").append("Still wrong, thus the gong.");
+  }
+  else if (wrongCounter === 3) {
+    $(".feedback").empty();
+    $(".feedback").append("Maybe you just like the sound of gongs?");
+  }
+  wrongCounter++;
+});
 
 });
 
