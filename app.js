@@ -6,7 +6,7 @@ var score = 0;
 var qNum = 0;
 
 // hide questions at start
-$(".q1, .q2, .q3, .q4, .q5, .game-info").hide();
+$(".q1, .q2, .q3, .q4, .q5").hide();
 
 // grey out previous and next navigation when they don't link anywhere
 var navGray = function() {
