@@ -5,14 +5,21 @@
   <title>Quiz app</title>
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="main.css">
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Righteous:400,700" rel="stylesheet" type="text/css">
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="app.js"></script>
 </head>
 <body>
-<h1>Classical Music quiz</h1>
+
+<h1><span class="big-initials">J</span>ohn <span class="big-initials">W</span>illiams <span class="quiz-title">quiz</span></h1>
 <div class="game-info">
-  <div class="qNum">Question 1 of 5</div>
-  <div class="score">Your score is 0%</div>
+  <div class="qNum">1 of 5</div>
+  <div class="score">0%</div>
+  <div class="feedback">You've got nothing wrong yet.</div>
 </div>
+
+<div class="q0"></div>
 <div class="q1"></div>
 <div class="q2"></div>
 <div class="q3"></div>
@@ -22,11 +29,5 @@
 <div class="next">Next &#62;</div>
 <div class="previous">&#60; Previous</div>
 
-<p><div class="feedback"></div></p>
-
-<!-- <button type="button" class="next">Next question</button> -->
-
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="app.js"></script>
 </body>
 </html>
