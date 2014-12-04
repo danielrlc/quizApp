@@ -1,19 +1,35 @@
-body {
+.content {
   margin: 0 auto;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   width: 400px;
   line-height: 1.3;
+  color: #103d50;
 }
 
 h1 {
   font-size: 1.6em;
-  /*font-weight: bold;*/
   padding: 20px 20px 0;
-  margin: 0 0 30px;
+  margin: 0 0 20px;
   font-weight: 700;
   font-family: 'Righteous', serif;
-  border-bottom: solid 1px #ccc;
+  border-bottom: solid 1px #6e91a1;
+}
+
+.feedback {
+  /*font-size: 1.2em;*/
+  padding: 10px;
+  margin: 50px auto 10px;
+  border-radius: 15px;
+  width: 200px;
+}
+
+.feedback-wrong {
+  background-color: #ffbaaa;
+}
+
+.feedback-right {
+  background-color: #c5e89b;
 }
 
 .q1, .q2, .q3, .q4, .q5 {
@@ -21,49 +37,74 @@ h1 {
 }
 
 li {
-  padding: 20px;
+  padding: 15px;
   list-style-type: none;
   margin: 12px;
   border-radius: 8px;
-  background-color: #ddd;
+  background-color: #fff;
+  border: solid 2px #6e91a1;
+  font-weight: 700;
+  font-size: 1.2em;
 }
 
 .rightShow {
-  background-color: #b2ffb2;
+  background-color: #c5e89b;
 }
 
 .wrongShow {
-  background-color: #c37070;
+  background-color: #ffbaaa;
 }
 
-.next, li {
+.next, .start-quiz, li {
   cursor: pointer;
 }
 
-.next {
-  margin: 25px auto;
+.next, .start-quiz {
+  margin: 35px auto 0;
   padding: 10px;
   text-align: center;
   width: 120px;
-  background-color: #555;
+  background-color: #6e91a1;
   border-radius: 25px;
+  color: #fff;
+  border: solid 2px #103d50;
 }
 
-audio {
-  padding-bottom: 20px;
-}
+/*audio {
+  padding: 18px 0 3px;
+}*/
 
 p {
   padding: 10px;
 }
 
-.game-info, .q0 {
-  border: solid #ccc 2px;
+.q0, .q6 {
+  border: solid 2px #6e91a1;
   border-radius: 8px;
-  padding: 10px;
-  margin: 10px 20px;
+  margin: 10px auto 0;
+}
+
+.q0, .q6 {
   width: 340px;
+  padding: 10px;
   line-height: 1.5;
+}
+
+/*.game-info {
+  background-color: #6e91a1;
+  color: #fff;
+  border: solid 2px #103d50;
+  width: 170px;
+  padding: 6px;
+  line-height: 1.3;
+}*/
+
+.qNum {
+  float: left;
+}
+
+.score {
+  float: right;
 }
 
 .big-initials {
@@ -72,5 +113,67 @@ p {
 
 .quiz-title {
   font-weight: 400px;
-  color: #555;
+  color: #6e91a1;
+}
+
+.q0 {
+  background-color: #fff;
+}
+
+.guitar-girl1, .trombone-boy1 {
+  position: relative;
+}
+
+.accordion-girl2, .drums-boy2 {
+  position: absolute;
+}
+
+.guitar-girl1, .accordion-girl2 {
+  float: left;
+}
+
+.trombone-boy1, .drums-boy2 {
+  float: right;
+}
+
+.guitar-girl1 {
+  left: 30px;
+}
+
+.accordion-girl2 {
+  left: 0px;
+  top: 300px;
+}
+
+.trombone-boy1 {
+  right: 20px;
+}
+
+.drums-boy2 {
+  right: 25px;
+  top: 320px;
+}
+
+.guitar-mobile, .trombone-mobile {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .guitar-girl1, .trombone-boy1, .accordion-girl2, .drums-boy2 {
+    display: none;
+  }
+  .guitar-mobile, .trombone-mobile {
+    display: inline;
+    margin: 0 auto;
+  }
+  .guitar-mobile {
+    float: left;
+  }
+  .trombone-mobile {
+    float: right;
+  }
+}
+
+@media (max-width: 599px) {
+  
 }
