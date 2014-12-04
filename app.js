@@ -6,7 +6,7 @@ var score = 0;
 var qNum = 0;
 
 // hide questions at start
-$(".q1, .q2, .q3, .q4, .q5, .game-info").hide();
+$(".q1, .q2, .q3, .q4, .q5, .q6, .game-info, .next").hide();
 
 // Pause audio when user clicks anywhere on page.
 // Thanks for help here:
@@ -21,36 +21,46 @@ $(document).click(function(){
 
 // Only one question showing at a time.
 // Player clicks "next" button to navigate through questions.
-$(".next").on("click", function() {
+$(".next, .start-quiz").on("click", function() {
   // set wrongCounter, so can give different feedback
   // for each wrong answer
   wrongCounter = 1;
+  qNum++;
   $(".feedback").empty();
   $(".feedback").append("Listen and match the film to the music.");
   $(".qNum").empty();
-  if (qNum !== 5) {
-    qNum++;
+  if (qNum !== 6) {
+    $(".qNum").append("Question: " + qNum + " of 5");
+    $(".q" + qNum).show();
+    $(".q" + (qNum - 1)).hide();
+    $(".game-info").show();
+    $(".next").show();
+    $(".start-quiz").hide();
   }
-  $(".qNum").append("Question: " + qNum + " of 5");
-  $(".q" + qNum).show();
-  $(".q" + (qNum - 1)).hide();
-  $(".game-info").show();
+  else {
+    alert("hello!");
+    $(".game-info, .next").hide();
+    $(".q6").show();
+    if (score === 100) {
+      $(".q6").append("<p>You chose...very wisely. Your final score is " + score + "%</p>");
+    }
+    else if (score === 80) {
+      $(".q6").append("<p>You chose...wisely. Your final score is " + score + "%</p>");
+    }
+    else if (score === 60) {
+      $(".q6").append("<p>You chose...quite wisely. Your final score is " + score + "%</p>");
+    }
+    else if (score === 40) {
+      $(".q6").append("<p>You chose...a little poorly. Your final score is " + score + "%</p>");
+    }
+    else if (score === 20) {
+      $(".q6").append("<p>You chose...poorly. Your final score is " + score + "%</p>");
+    }
+    else {
+      $(".q6").append("<p>You chose...very poorly. Your final score is " + score + "%</p>");
+    }
+  }
 });
-
-// $(".previous").on("click", function() {
-//   // set wrongCounter, so can give different feedback
-//   // for each wrong answer
-//   wrongCounter = 1;
-//   $(".feedback").empty();
-//   $(".feedback").append("Listen and match the film to the music.");
-//   $(".qNum").empty();
-//   if (qNum !== 0) {
-//     qNum--;
-//   }
-//   $(".qNum").append("Question " + qNum + " of 5");
-//   $(".q" + qNum).show();
-//   $(".q" + (qNum + 1)).hide();
-// });
 
 // ***************************************************************************************************************************
 
@@ -156,7 +166,7 @@ $(".wrong").one("click", function() {
   }
   if (wrongCounter === 1) {
     $(".feedback").empty();
-    $(".feedback").append("You have gong wrong.");
+    $(".feedback").append("You have gong wrong – have another go.");
   }
   else if (wrongCounter === 2) {
     $(".feedback").empty();
@@ -169,6 +179,49 @@ $(".wrong").one("click", function() {
   wrongCounter++;
 });
 
+// ***************************************************************************************************************************
+
+// Final score page
+// if (qNum === 6) {
+//   alert("hello!");
+//   $(".game-info, .next").hide();
+//   $(".q6").show();
+//   if (score === 100) {
+//     $(".q6").append("<p>You chose...very wisely. Your final score is " + score + "%</p>");
+//   }
+//   else if (score === 80) {
+//     $(".q6").append("<p>You chose...wisely. Your final score is " + score + "%</p>");
+//   }
+//   else if (score === 60) {
+//     $(".q6").append("<p>You chose...quite wisely. Your final score is " + score + "%</p>");
+//   }
+//   else if (score === 40) {
+//     $(".q6").append("<p>You chose...a little poorly. Your final score is " + score + "%</p>");
+//   }
+//   else if (score === 20) {
+//     $(".q6").append("<p>You chose...poorly. Your final score is " + score + "%</p>");
+//   }
+//   else {
+//     $(".q6").append("<p>You chose...very poorly. Your final score is " + score + "%</p>");
+//   }
+// }
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
