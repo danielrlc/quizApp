@@ -6,7 +6,7 @@ var score = 0;
 var qNum = 0;
 
 // hide questions at start
-$(".q1, .q2, .q3, .q4, .q5, .q6, .game-info, .next").hide();
+$(".q1, .q2, .q3, .q4, .q5, .q6, .game-info").hide();
 
 // Pause audio when user clicks anywhere on page.
 // Thanks for help here:
@@ -21,7 +21,7 @@ $(document).click(function(){
 
 // Only one question showing at a time.
 // Player clicks "next" button to navigate through questions.
-$(".next, .start-quiz").on("click", function() {
+$(".next").on("click", function() {
   // set wrongCounter, so can give different feedback
   // for each wrong answer
   wrongCounter = 1;
@@ -30,17 +30,23 @@ $(".next, .start-quiz").on("click", function() {
   $(".feedback").append("Listen and match the film to the music.");
   $(".qNum").empty();
   if (qNum !== 6) {
-    $(".qNum").append("Question: " + qNum + " of 5");
+    $(".qNum").append(qNum + "/5");
     $(".q" + qNum).show();
     $(".q" + (qNum - 1)).hide();
     $(".game-info").show();
-    $(".next").show();
-    $(".start-quiz").hide();
+    $(".next").empty();
+    $(".next").append("Next");
   }
   else {
-    alert("hello!");
-    $(".game-info, .next").hide();
     $(".q6").show();
+    $(".q6").append(finalScore());
+    $(".next, .game-info, .q5").hide();
+  }
+});
+
+// Final score feedback
+var finalScore = function() {
+  $(".game-info, .next").hide();
     if (score === 100) {
       $(".q6").append("<p>You chose...very wisely. Your final score is " + score + "%</p>");
     }
@@ -59,8 +65,7 @@ $(".next, .start-quiz").on("click", function() {
     else {
       $(".q6").append("<p>You chose...very poorly. Your final score is " + score + "%</p>");
     }
-  }
-});
+  };
 
 // ***************************************************************************************************************************
 
@@ -144,13 +149,14 @@ $(".q5").append(q5.qAudio, q5.a1, q5.a2, q5.a3, q5.a4);
 $(".right").one("click", function() {
   $(".feedback").empty();
   $(".feedback").append("Correct!");
+  $(".feedback").addClass("feedback-right");
   $(this).addClass("rightShow");
   $(this).append("<audio src='tada-right.mp3' preload='auto' autoplay volume=.2></audio>");
   if (wrongCounter === 1) {
     score += 20;
   }
   $(".score").empty();
-  $(".score").append("Score: " + score + "%");
+  $(".score").append(score + "%");
   
   // This makes sure player can't pick a wrong answer after selecting the right answer.
   wrongCounter += 4;
@@ -158,6 +164,8 @@ $(".right").one("click", function() {
 
 // Feedback if player chooses wrong answer. Different feedback is given for first, second and third wrong answer.
 $(".wrong").one("click", function() {
+  $(".feedback").removeClass("feedback-right");
+  $(".feedback").addClass("feedback-wrong");
   if (wrongCounter < 4) {
   $(this).addClass("wrongShow");
   $(this).append("<audio src='gongWrong.mp3' preload='auto' autoplay ></audio>");

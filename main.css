@@ -10,10 +10,26 @@
 h1 {
   font-size: 1.6em;
   padding: 20px 20px 0;
-  margin: 0 0 30px;
+  margin: 0 0 20px;
   font-weight: 700;
   font-family: 'Righteous', serif;
   border-bottom: solid 1px #6e91a1;
+}
+
+.feedback {
+  /*font-size: 1.2em;*/
+  padding: 10px;
+  margin: 50px auto 10px;
+  border-radius: 15px;
+  width: 200px;
+}
+
+.feedback-wrong {
+  background-color: #ffbaaa;
+}
+
+.feedback-right {
+  background-color: #c5e89b;
 }
 
 .q1, .q2, .q3, .q4, .q5 {
@@ -54,27 +70,41 @@ li {
   border: solid 2px #103d50;
 }
 
-audio {
+/*audio {
   padding: 18px 0 3px;
-}
+}*/
 
 p {
   padding: 10px;
 }
 
-.game-info, .q0 {
+.q0, .q6 {
   border: solid 2px #6e91a1;
   border-radius: 8px;
-  padding: 10px;
-  margin: 10px 20px 0;
+  margin: 10px auto 0;
+}
+
+.q0, .q6 {
   width: 340px;
+  padding: 10px;
   line-height: 1.5;
 }
 
-.game-info {
+/*.game-info {
   background-color: #6e91a1;
   color: #fff;
   border: solid 2px #103d50;
+  width: 170px;
+  padding: 6px;
+  line-height: 1.3;
+}*/
+
+.qNum {
+  float: left;
+}
+
+.score {
+  float: right;
 }
 
 .big-initials {
